@@ -6,8 +6,13 @@ class Test < ApplicationRecord
   has_many :user_tests
   has_many :users, through: :user_tests
 
-  def self.sort_by_category(category_name)
-    category_id = Category.find_by(title: category_name).id
-    Test.where(category_id:).order(title: :desc).pluck(:title)
+  scope :easy, -> { where(level: 0..1) }
+  scope :medium, -> { where(level: 2..4) }
+  scope :hard, -> { where(level: 5..7) }
+
+  scope :category, ->(title) { joins(:category).where(category: { title: }) }
+
+  def self.sort_by_category(title)
+    category(title).order(title: :desc).pluck(:title)
   end
 end
