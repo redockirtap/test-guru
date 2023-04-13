@@ -3,8 +3,8 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: 'User'
 
   has_many :questions
-  has_many :user_tests
-  has_many :users, through: :user_tests
+  has_many :test_passages
+  has_many :users, through: :test_passages
 
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { greater_than: -1, only_integer: true }
