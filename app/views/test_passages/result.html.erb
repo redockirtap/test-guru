@@ -1,1 +1,9 @@
 <h2> <%= @test_passage.test.title %> was completed! </h2>
+
+<p>
+  You answered <%= @test_passage.correct_questions %> out of <%= @test_passage.test.questions.count %> questions correct!
+</p>
+
+<b><%= score_count(@test_passage) %></b>
+
+<%= link_to 'Back', tests_path %>
