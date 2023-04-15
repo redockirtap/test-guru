@@ -12,8 +12,10 @@
 
   <body>
     <%= render 'layouts/navbar' %>
+    <%= render 'shared/flash' %>
+
     <div class="content-wrapper">
-     <%= yield %>
+      <%= yield %>
     </div>
     <%= render 'layouts/footer' %>
   </body>
