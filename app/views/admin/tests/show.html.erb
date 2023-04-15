@@ -1,4 +1,4 @@
-<p> <strong>Test:</strong> <%= @test.title %> | <%= link_to 'Edit', edit_test_path(@test) %> </p>
+<p> <strong>Test:</strong> <%= @test.title %> | <%= link_to 'Edit', edit_admin_test_path(@test) %> </p>
 <p> <strong>Level:</strong> <%= test_level(@test) %> </p>
 
 <h2>Questions: </h2> 
@@ -9,4 +9,4 @@
   <%= render 'test_questions' %>
 </ol>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to 'Back', admin_tests_path %>
