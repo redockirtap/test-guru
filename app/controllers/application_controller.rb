@@ -6,7 +6,10 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
-    redirect_to login_path, alert: "Are you a Guru? Something's wrong with email/password." unless current_user
+    unless current_user
+      cookies[:back_to_page] = request.url
+      redirect_to login_path, alert: "Are you a Guru? Something's wrong with email/password."
+    end
   end
 
   def current_user

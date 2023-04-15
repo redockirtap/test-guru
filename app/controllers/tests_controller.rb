@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :index
   before_action :set_user, only: :start
   before_action :find_test, only: [:show, :edit, :update, :destroy, :start]
 
