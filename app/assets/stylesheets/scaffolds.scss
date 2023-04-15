@@ -1,4 +1,6 @@
 body {
+  position: relative;
+  min-height: 100vh;
   background-color: #fff;
   color: #333;
   margin: 33px; }
@@ -62,9 +64,14 @@ div.actions {
   list-style: square; }
 
 label {
-  display: block; }
+  display: inline; }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+text-align: center; }
+
+.content-wrapper {
+  padding-bottom: 3rem;
+}
