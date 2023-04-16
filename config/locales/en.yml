@@ -24,6 +24,8 @@ en:
       question:
         create: "Create"
         update: "Update"
+    select:
+      prompt: "Choose category:"
 
     label:
       test:

@@ -24,6 +24,8 @@ ru:
       question:
         create: "Создать"
         update: "Обновить"
+    select:
+      prompt: "Выберите категорию:"
 
     label:
       test:
