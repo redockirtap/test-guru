@@ -8,6 +8,8 @@ class TestsController < ApplicationController
   end
 
   def start
+    return if @test.questions.empty?
+
     current_user.tests.push(@test)
     redirect_to current_user.test_passage(@test)
   end

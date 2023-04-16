@@ -1,7 +1,7 @@
 class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :test
-  belongs_to :current_question, class_name: 'Question', optional: true
+  belongs_to :current_question, class_name: 'Question', optional: true, dependent: :destroy
 
   before_validation :before_validation_set_current_question, on: :create
   before_update :before_update_set_next_question
@@ -19,7 +19,7 @@ class TestPassage < ApplicationRecord
   private
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    correct_answers.ids.sort == answer_ids.map(&:to_i).sort unless answer_ids.nil?
   end
 
   def correct_answers

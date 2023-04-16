@@ -1,8 +1,8 @@
 <% @test.questions.each do |question| %>
   <li>
     <p> <%= question.body %> </p>
-    <%= link_to 'Show', question %> |
-    <%= link_to 'Edit', edit_question_path(question) %> |
-    <%= link_to 'Delete', question_path(question), method: :delete, data: {confirm: "Are you sure?"} %> 
+    <%= link_to 'Show', admin_question_path(question) %> |
+    <%= link_to 'Edit', edit_admin_question_path(question) %> |
+    <%= link_to 'Delete', admin_question_path(question), method: :delete, data: {confirm: "Are you sure?"} %> 
   </li>
 <% end %>

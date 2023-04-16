@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_15_190733) do
+ActiveRecord::Schema.define(version: 2023_04_16_090506) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2023_04_15_190733) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "email", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -76,18 +76,16 @@ ActiveRecord::Schema.define(version: 2023_04_15_190733) do
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.string "type", default: "User", null: false
-    t.string "first_name"
-    t.string "last_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["type"], name: "index_users_on_type"
   end
 
-  add_foreign_key "answers", "questions"
-  add_foreign_key "questions", "tests"
-  add_foreign_key "test_passages", "questions", column: "current_question_id"
-  add_foreign_key "test_passages", "tests"
-  add_foreign_key "test_passages", "users"
-  add_foreign_key "tests", "categories"
+  add_foreign_key "answers", "questions", on_delete: :cascade
+  add_foreign_key "questions", "tests", on_delete: :cascade
+  add_foreign_key "test_passages", "questions", column: "current_question_id", on_delete: :cascade
+  add_foreign_key "test_passages", "tests", on_delete: :cascade
+  add_foreign_key "test_passages", "users", on_delete: :cascade
+  add_foreign_key "tests", "categories", on_delete: :cascade
 end

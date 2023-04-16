@@ -8,6 +8,6 @@ class Admin::BaseController < ApplicationController
   private
 
   def authorize_admin!
-    redirect_to root_path, alert: 'Admins only!' unless current_user.is_a?(Admin)
+    redirect_to root_path, alert: 'Admins only!' unless current_user.admin?
   end
 end

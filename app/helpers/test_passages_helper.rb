@@ -14,6 +14,6 @@ module TestPassagesHelper
   end
 
   def current_question_number(resource)
-    resource.test.question_ids.find_index(resource.current_question.id) + 1
+    resource.test.question_ids.find_index(resource.current_question.id) + 1 unless resource.test.question_ids.empty?
   end
 end
