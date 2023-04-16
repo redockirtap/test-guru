@@ -1,6 +1,14 @@
 en:
   hello: "Hello world"
 
+  links:
+    new: "New %{model}"
+    show: "Show"
+    edit: "Edit"
+    editing: "Editing %{model}"
+    delete: "Delete"
+    back: "Back"
+
   bools:
     "true": "Yes"
     "false": "No"
@@ -8,8 +16,14 @@ en:
   helpers:
     submit:
       test:
-        create: "Create Test"
-        update: "Update Test"
+        create: "Create"
+        update: "Update"
+      answer:
+        create: "Create"
+        update: "Update"
+      question:
+        create: "Create"
+        update: "Update"
 
     label:
       test:
@@ -20,6 +34,9 @@ en:
       answer:
         body: "Answer:"
         correct: "Correct"
+
+      question:
+        body: "Question:"
 
   layouts:
     navbar:
@@ -46,18 +63,19 @@ en:
       question: "Question"
       answer: "Answer"
       correct: "Correct"
-    actions:
-      new: "New %{model}"
-      show: "Show"
-      edit: "Edit"
-      editing: "Editing %{model}"
-      delete: "Delete"
-      back: "Back"
+      
     tests:
+      show:
+        questions: "Questions:"
       create:
         success: "Test created successfully."
       index:
         header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        questions: "Question"
+        actions: ""
+
     navbar:
       username: "Hi, %{name}!"
       back: "Back to App"
@@ -84,6 +102,9 @@ en:
   test_passages:
     result:
       header: "Test %{title} completed!"
+      correct_questions: "You answered %{n} out of %{m} answers correctly!"
+      failed: "<p class=\"test--failed\">You scored %{total}%. You failed...</p>"
+      passed: "<p class=\"test--passed\">You scored %{total}%. You passed the test!</p>"
     show:
       test_passing: "Passing the %{title}"
       question_number: "Question %{number}"

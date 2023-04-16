@@ -3,9 +3,9 @@ module TestPassagesHelper
     total = ((resource.correct_questions / resource.test.questions.count.to_f) * 100).round
 
     if total <= 65
-      "<p class=\"test--failed\">You scored #{total}%. Test should be retaken.</p>".html_safe
+      I18n.t('test_passages.result.failed', total:).html_safe
     else
-      "<p class=\"test--failed\">You scored #{total}%. Test is passed successfully!</p>".html_safe
+      I18n.t('test_passages.result.passed', total:).html_safe
     end
   end
 

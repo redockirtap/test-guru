@@ -1,9 +1,9 @@
 <h2> <%= t('.header', title: @test_passage.test.title) %></h2>
 
 <p>
-  You answered <%= @test_passage.correct_questions %> out of <%= @test_passage.test.questions.count %> questions correct!
+  <%= t('.correct_questions', n: @test_passage.correct_questions, m: @test_passage.test.questions.count) %>
 </p>
 
 <b><%= score_count(@test_passage) %></b>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to t('links.back'), tests_path %>

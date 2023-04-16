@@ -1,13 +1,13 @@
-<p> <strong>Test:</strong> <%= @test.title %> | <%= link_to 'Edit', edit_admin_test_path(@test) %> </p>
-<p> <strong>Level:</strong> <%= test_level(@test) %> </p>
-<p> <strong>Author:</strong> <%= @test.author.name %> </p>
+<p> <b><%= t('admin.labels.test') %>:</b> <%= @test.title %> | <%= link_to t('links.edit'), edit_admin_test_path(@test) %> </p>
+<p> <b><%= t('admin.labels.level') %>:</b> <%= test_level(@test) %> </p>
+<p> <b><%= t('admin.labels.author') %>:</b> <%= @test.author.name %> </p>
 
-<h3>Questions: </h3> 
+<h3><%= t('.questions')%> </h3> 
 
-<p><%= link_to 'New question', new_admin_test_question_path(@test) %></p>
+<p><%= link_to t('links.new', model: human_name(Question)), new_admin_test_question_path(@test) %></p>
 
 <ol>
   <%= render 'test_questions' %>
 </ol>
 
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('links.back'), admin_tests_path %>

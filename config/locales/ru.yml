@@ -1,6 +1,14 @@
 ru:
   hello: "Привет мир"
 
+  links:
+    new: "Новый %{model}"
+    back: "Назад"
+    show: "Открыть"
+    edit: "Изменить"
+    editing: "Изменить %{model}"
+    delete: "Удалить"
+
   bools:
     "true": "Да"
     "false": "Нет"
@@ -8,8 +16,14 @@ ru:
   helpers:
     submit:
       test:
-        create: "Создать Тест"
-        update: "Обновить Тест"
+        create: "Создать"
+        update: "Обновить"
+      answer:
+        create: "Создать"
+        update: "Обновить"
+      question:
+        create: "Создать"
+        update: "Обновить"
 
     label:
       test:
@@ -20,6 +34,9 @@ ru:
       answer:
         body: "Ответ:"
         correct: "Этот ответ правильный"
+
+      question:
+        body: "Вопрос:"
 
   layouts:
     navbar:
@@ -48,18 +65,19 @@ ru:
       question: "Вопрос"
       answer: "Ответ"
       correct: "Правильный"
-    actions:
-      new: "Новый %{model}"
-      show: "Открыть"
-      edit: "Изменить"
-      editing: "Изменить %{model}"
-      delete: "Удалить"
-      back: "Назад"
+
     tests:
+      show:
+        questions: "Вопросы:"
       create:
         success: "Тест создан успешно."
       index:
         header: "Тестики"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопрос"
+        actions: ""
+
     navbar:
       username: "Привет, %{name}!"
       back: "Назад к тестам"
@@ -86,6 +104,9 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} завершён!"
+      correct_questions: "Вы ответили правильно на %{n} из %{m} вопросов!"
+      failed: "<p class=\"test--failed\">Ваш счет: %{total}%. Вы не прошли тест.</p>"
+      passed: "<p class=\"test--passed\">Ваш счет: %{total}%. Вы прошли тест!</p>"
     show:
       test_passing: "Прохождение теста по %{title}"
       question_number: "Вопрос %{number}"

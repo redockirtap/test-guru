@@ -1,4 +1,4 @@
-<h2>Edit <%= @test.title %> test</h2>
+<h2><%= t('links.editing', model: human_name(Test)) %></h2>
 
 <%= render 'form' %>
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('links.back'), admin_tests_path %>

@@ -1,16 +1,16 @@
-<p> <b><%= I18n.t('.admin.labels.question', model: human_name(Question)) %>:</b>
+<p> <b><%= t('admin.labels.question', model: human_name(Question)) %>:</b>
 <%= @answer.question.body %> | 
-<%= link_to I18n.t('.admin.actions.edit'), edit_admin_question_path(@answer.question) %> </p>
+<%= link_to t('links.edit'), edit_admin_question_path(@answer.question) %> </p>
 
 <p>
-  <b><%= I18n.t('.admin.labels.answer', model: human_name(Answer)) %>:</b>
+  <b><%= t('admin.labels.answer', model: human_name(Answer)) %>:</b>
   <%= @answer.body %> |
-  <%= link_to I18n.t('.admin.actions.edit'), edit_admin_answer_path %> </p>
+  <%= link_to t('links.edit'), edit_admin_answer_path %> </p>
 </p>
 
 <p>
-  <b><%= I18n.t('.admin.labels.correct', model: human_name(Answer)) %>:</b>
+  <b><%= t('admin.labels.correct', model: human_name(Answer)) %>:</b>
   <%= bool_name(@answer.correct) %>
 </p>
 
-<%= link_to I18n.t('admin.actions.back'), admin_question_path(@answer.question) %>
+<%= link_to t('admin.actions.back'), admin_question_path(@answer.question) %>
