@@ -1,0 +1,93 @@
+ru:
+  hello: "Привет мир"
+
+  bools:
+    "true": "Да"
+    "false": "Нет"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень сложности"
+        category_id: "Категория"
+
+      answer:
+        body: "Ответ:"
+        correct: "Этот ответ правильный"
+
+  layouts:
+    navbar:
+      username: "Привет, %{name}!"
+      logout: "Выйти"
+      login: "Войти"
+      signup: "Зарегистрироваться"
+
+  shared:
+    errors:
+      header:
+        one: "Обнаружена %{count} ошибка"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        other: "Обнаружено %{count} ошибки"
+
+  tests_mailer:
+    completed_test:
+      subject: "Тест завершен!"
+
+  admin:
+    labels:
+      test: "Тест"
+      level: "Уровень"
+      author: "Автор"
+      question: "Вопрос"
+      answer: "Ответ"
+      correct: "Правильный"
+    actions:
+      new: "Новый %{model}"
+      show: "Открыть"
+      edit: "Изменить"
+      editing: "Изменить %{model}"
+      delete: "Удалить"
+      back: "Назад"
+    tests:
+      create:
+        success: "Тест создан успешно."
+      index:
+        header: "Тестики"
+    navbar:
+      username: "Привет, %{name}!"
+      back: "Назад к тестам"
+
+    questions:
+      show:
+        answers: "Ответы:"
+
+  tests:
+    index:
+      header: "Тестики"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: ""
+    test:
+      start: "Пройти"
+      test_level:
+        elementary: "Легкий"
+        advanced: "Средний"
+        hard: "Сложный"
+        hero: "Невозможный"
+
+  test_passages:
+    result:
+      header: "Тест %{title} завершён!"
+    show:
+      test_passing: "Прохождение теста по %{title}"
+      question_number: "Вопрос %{number}"
+    form:
+      next_question: "Далее"

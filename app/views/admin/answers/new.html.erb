@@ -1,4 +1,4 @@
-<h1>New Answer</h1>
+<h2><%= I18n.t('.admin.actions.new', model: human_name(Answer)) %></h2>
 
 <p>
   <%= @question.body %>
@@ -6,4 +6,4 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', admin_question_path(@question) %>
+<%= link_to I18n.t('.admin.actions.back'), admin_question_path(@question) %>

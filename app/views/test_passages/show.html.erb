@@ -1,7 +1,7 @@
-<h2> Passing the <%= @test_passage.test.title %> </h2>
+<h2>  <%= t('.test_passing', title: @test_passage.test.title) %> </h2>
 
 <p> 
-  Question <%= questions_count(@test_passage) %>
+  <%= t('.question_number', number: questions_count(@test_passage)) %>
 </p>
 
 <b>

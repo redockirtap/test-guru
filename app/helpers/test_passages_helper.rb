@@ -10,7 +10,7 @@ module TestPassagesHelper
   end
 
   def questions_count(resource)
-    "#{current_question_number(resource)} out of #{@test_passage.test.questions.count}"
+    "#{current_question_number(resource)}/#{@test_passage.test.questions.count}"
   end
 
   def current_question_number(resource)

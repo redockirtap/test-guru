@@ -1,7 +1,8 @@
 module TestsHelper
-  TEST_LEVELS = { 0 => :easy, 1 => :elementary, 2 => :advanced, 3 => :hard }.freeze
+  TEST_LEVELS = { 0 => :elementary, 1 => :advanced, 2 => :hard }.freeze
 
   def test_level(test)
-    TEST_LEVELS[test.level] || :hero
+    level = TEST_LEVELS[test.level] || :hero
+    I18n.t(".tests.test.test_level.#{level}")
   end
 end
