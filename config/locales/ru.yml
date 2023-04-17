@@ -40,13 +40,6 @@ ru:
       question:
         body: "Вопрос:"
 
-  layouts:
-    navbar:
-      username: "Привет, %{name}!"
-      logout: "Выйти"
-      login: "Войти"
-      signup: "Зарегистрироваться"
-
   shared:
     errors:
       header:
@@ -54,6 +47,11 @@ ru:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      username: "Привет, %{name}!"
+      logout: "Выйти"
+      login: "Войти"
+      signup: "Зарегистрироваться"
 
   tests_mailer:
     completed_test:

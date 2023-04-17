@@ -1,0 +1,18 @@
+
+<nav class="navbar navbar-light bg-light ps-5 pe-5">
+  <% if user_signed_in? && current_user.admin? %>
+    <%= link_to 'TestGuru Admin Panel', admin_tests_path, class: 'navbar-brand' %>
+  <% else %>
+    <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+  <% end %>
+   
+  <span class="navbar-text">
+  <% if user_signed_in? %>
+    <%= t('.username', name: current_user.name) %> |
+     <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to t('.login'), new_user_session_path %> | 
+    <%= link_to t('.signup'), new_user_registration_path %>
+  <% end %>
+  </span>
+</nav>

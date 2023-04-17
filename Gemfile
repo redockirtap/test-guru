@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise', '~> 4.0'
 
 gem 'rails-i18n'
+
+gem 'jquery-rails'
+gem 'bootstrap', '~> 5.0.0-beta2'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -40,18 +40,16 @@ en:
       question:
         body: "Question:"
 
-  layouts:
-    navbar:
-      username: "Hi, %{name}"
-      logout: "Logout"
-      login: "Login"
-      signup: "Signup"
-
   shared:
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      username: "Hi, %{name}"
+      logout: "Logout"
+      login: "Login"
+      signup: "Signup"
 
   tests_mailer:
     completed_test:
