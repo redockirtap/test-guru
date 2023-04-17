@@ -10,7 +10,9 @@
   <body>
     <%= render 'admin/navbar' %>
     <%= render 'shared/flash' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <div class="container d-flex flex-column justify-content-between bd-highlight mb-3">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
