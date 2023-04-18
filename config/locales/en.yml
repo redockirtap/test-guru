@@ -53,7 +53,7 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
     nav:
-      username: "Hi, %{name}"
+      username: "Hi, %{name}!"
       logout: "Logout"
       login: "Login"
       signup: "Signup"
@@ -123,3 +123,6 @@ en:
       question_number: "Question %{number}"
     form:
       next_question: "Next"
+      gist:
+        success: "Gist is created!"
+        failure: "An error ocurred while creating a gist, try again"

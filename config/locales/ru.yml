@@ -124,3 +124,6 @@ ru:
       question_number: "Вопрос %{number}"
     form:
       next_question: "Далее"
+      gist:
+        success: "Gist успешно создан!"
+        failure: "Во время создания gist произошла ошибка, повторите запрос"

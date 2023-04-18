@@ -16,7 +16,14 @@
         <% end %>
         </div>
 
-        <%= form.submit t('.next_question'), class: 'btn btn-primary' %>
+        <div class="d-flex justify-content-between">
+          <%= form.submit t('.next_question'), class: 'btn btn-primary' %>
+
+          <%= link_to 'Создать Gist вопроса', 
+              gist_test_passage_path(@test_passage),
+              method: :post,
+              class: 'btn btn-outline-danger' %>
+        </div>
       </div>
     <% end %>
 
