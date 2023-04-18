@@ -125,5 +125,5 @@ ru:
     form:
       next_question: "Далее"
       gist:
-        success: "Gist успешно создан!"
+        success_html: "Gist успешно создан! <a href=\"%{url}\" target=\"_blank\">Посмотреть на Github Gist</a>"
         failure: "Во время создания gist произошла ошибка, повторите запрос"

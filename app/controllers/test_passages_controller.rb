@@ -22,18 +22,6 @@ class TestPassagesController < ApplicationController
     end
   end
 
-  def gist
-    call = GistQuestionService.new(@test_passage.current_question).call
-
-    flash_options = if !call.nil?
-                      { notice: t('test_passages.form.gist.success') }
-                    else
-                      { alert: t('test_passages.form.gist.failure') }
-                    end
-
-    redirect_to @test_passage, flash_options
-  end
-
   private
 
   def set_test_passage

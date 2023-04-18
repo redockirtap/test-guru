@@ -20,7 +20,7 @@
           <%= form.submit t('.next_question'), class: 'btn btn-primary' %>
 
           <%= link_to 'Создать Gist вопроса', 
-              gist_test_passage_path(@test_passage),
+              gists_path(id: @test_passage),
               method: :post,
               class: 'btn btn-outline-danger' %>
         </div>
