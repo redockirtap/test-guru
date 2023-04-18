@@ -124,5 +124,6 @@ en:
     form:
       next_question: "Next"
       gist:
+        btn: "Create a Gist"
         success: "Gist is created! <a href=\"%{url}\" target=\"_blank\">Check on Github Gist</a>"
         failure: "An error ocurred while creating a gist, try again"

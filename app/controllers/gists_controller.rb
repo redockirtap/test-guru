@@ -9,7 +9,7 @@ class GistsController < ApplicationController
 
     if service.success?
       current_user.gists.create(question: @test_passage.current_question, url: gist_url)
-      flash[:notice] = t('test_passages.form.gist.success_html', url: gist_url)
+      flash[:notice] = t('test_passages.form.gist.success', url: gist_url)
     else
       flash[:alert] = t('test_passages.form.gist.failure')
     end
