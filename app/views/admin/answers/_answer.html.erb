@@ -1,6 +1,6 @@
 <tr>
   <td class="text-center align-middle"><%= answer.body %> </td>
-  <td class="text-center align-middle"><%= answer.correct %> </td>
+  <td class="text-center align-middle"><%= bool_name(answer.correct) %> </td>
   <td class="text-center align-middle"><%= link_to t('links.show'), admin_answer_path(answer) %> </td>
   <td class="text-center align-middle"><%= link_to t('links.edit'), edit_admin_answer_path(answer) %> </td>
   <td class="text-center align-middle"><%= link_to t('links.delete'), 

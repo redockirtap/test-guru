@@ -1,5 +1,12 @@
 en:
-  hello: "Hello world"
+  placeholders:
+    test:
+      title: "Enter test title"
+    question:
+      title: "Enter the question"
+    answer:
+      title: "Enter the answer"
+    
 
   links:
     new: "New %{model}"
@@ -66,7 +73,10 @@ en:
       
     tests:
       show:
+        title: "Title"
         questions: "Questions"
+        answers: "Answers"
+        actions: ""
       create:
         success: "Test created successfully."
       index:
@@ -82,7 +92,10 @@ en:
 
     questions:
       show:
-        answers: "Answers:"
+        answers: "Answers"
+        title: "Title"
+        correct: "Correct?"
+        actions: ""
 
   tests:
     index:
@@ -94,19 +107,19 @@ en:
     test:
       start: "Start"
       test_level:
-        elementary: "Elementary"
-        advanced: "Advanced"
-        hard: "Hard"
-        hero: "Hero"
+        0: "Elementary"
+        1: "Advanced"
+        2: "Hard"
+        3: "Hero"
 
   test_passages:
     result:
       header: "Test %{title} completed!"
       correct_questions: "You answered %{n} out of %{m} answers correctly!"
-      failed: "<p class=\"test--failed\">You scored %{total}%. You failed...</p>"
-      passed: "<p class=\"test--passed\">You scored %{total}%. You passed the test!</p>"
+      failed: "<p class=\"test--failed mb-0\">You scored %{total}%. You failed...</p>"
+      passed: "<p class=\"test--passed mb-0\">You scored %{total}%. You passed the test!</p>"
     show:
-      test_passing: "Passing the %{title}"
+      test_passing: "Taking the %{title} test"
       question_number: "Question %{number}"
     form:
       next_question: "Next"

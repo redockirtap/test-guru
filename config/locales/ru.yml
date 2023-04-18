@@ -1,5 +1,11 @@
 ru:
-  hello: "Привет мир"
+  placeholders:
+    test:
+      title: "Введите название теста"
+    question:
+      title: "Введите вопрос"
+    answer:
+      title: "Введите ответ"
 
   links:
     new: "Новый %{model}"
@@ -68,7 +74,10 @@ ru:
 
     tests:
       show:
+        title: "Название"
         questions: "Вопросы"
+        answers: "Ответы"
+        actions: ""
       create:
         success: "Тест создан успешно."
       index:
@@ -84,7 +93,10 @@ ru:
 
     questions:
       show:
-        answers: "Ответы:"
+        answers: "Ответы"
+        title: "Название"
+        correct: "Правильный?"
+        actions: ""
 
   tests:
     index:
