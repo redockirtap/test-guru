@@ -1,11 +1,18 @@
-<h2>  <%= t('.test_passing', title: @test_passage.test.title) %> </h2>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-5">
+    <h3>
+      <%= t('.test_passing', title: @test_passage.test.title) %>
+    </h3>
 
-<p> 
-  <%= t('.question_number', number: questions_count(@test_passage)) %>
-</p>
+    <p class="mb-1"> 
+      <%= t('.question_number', number: questions_count(@test_passage)) %>
+    </p>
 
-<b>
- <%= @test_passage.current_question.body %>
-</b>
+    <b>
+    <%= @test_passage.current_question.body %>
+    </b>
 
-<%= render 'form' %>
+    <%= render 'form' %>
+
+  </div>
+</div>

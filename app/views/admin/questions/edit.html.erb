@@ -1,5 +1,11 @@
-<h2><%= t('links.editing', model: human_name(Question)) %></h2>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h2 class="row justify-content-center">
+      <%= t('links.editing', model: human_name(Question)) %>
+    </h2>
 
-<%= render 'form' %> 
+    <%= render 'form' %> 
 
-<%= link_to t('links.back'), admin_test_path(@question.test) %>
+    <%= link_to t('links.back'), admin_test_path(@question.test) %>
+  </div>
+</div>

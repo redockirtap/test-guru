@@ -1,9 +1,15 @@
-<h2><%= t('links.new', model: human_name(Answer)) %></h2>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h2 class="row justify-content-center">
+      <%= t('links.new', model: human_name(Answer)) %>
+    </h2>
 
-<p>
-  <%= @question.body %>
-</p>
+    <p class="d-flex text-center">
+      <%= @question.body %>
+    </p>
 
-<%= render 'form' %>
+    <%= render 'form' %>
 
-<%= link_to t('links.back'), admin_question_path(@question) %>
+    <%= link_to t('links.back'), admin_question_path(@question) %>
+  </div>
+</div>

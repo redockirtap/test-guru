@@ -25,7 +25,7 @@ ru:
         create: "Создать"
         update: "Обновить"
     select:
-      prompt: "Выберите категорию:"
+      prompt: "Выберите категорию"
 
     label:
       test:
@@ -96,17 +96,17 @@ ru:
     test:
       start: "Пройти"
       test_level:
-        elementary: "Легкий"
-        advanced: "Средний"
-        hard: "Сложный"
-        hero: "Невозможный"
+        0: "Легкий"
+        1: "Средний"
+        2: "Сложный"
+        3: "Невозможный"
 
   test_passages:
     result:
       header: "Тест %{title} завершён!"
       correct_questions: "Вы ответили правильно на %{n} из %{m} вопросов!"
-      failed: "<p class=\"test--failed\">Ваш счет: %{total}%. Вы не прошли тест.</p>"
-      passed: "<p class=\"test--passed\">Ваш счет: %{total}%. Вы прошли тест!</p>"
+      failed: "<p class=\"test--failed mb-0\">Ваш счет: %{total}%. Вы не прошли тест.</p>"
+      passed: "<p class=\"test--passed mb-0\">Ваш счет: %{total}%. Вы прошли тест!</p>"
     show:
       test_passing: "Прохождение теста по %{title}"
       question_number: "Вопрос %{number}"

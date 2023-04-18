@@ -9,9 +9,10 @@ class Test < ApplicationRecord
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { greater_than: -1, only_integer: true }
 
-  scope :easy, -> { where(level: 0..1) }
-  scope :medium, -> { where(level: 2..4) }
-  scope :hard, -> { where(level: 5..7) }
+  scope :easy, -> { where(level: 0) }
+  scope :advanced, -> { where(level: 1) }
+  scope :hard, -> { where(level: 2) }
+  scope :hero, -> { where(level: 3) }
 
   scope :category, ->(title) { joins(:category).where(category: { title: }) }
 
