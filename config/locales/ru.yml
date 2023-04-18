@@ -68,14 +68,14 @@ ru:
 
     tests:
       show:
-        questions: "Вопросы:"
+        questions: "Вопросы"
       create:
         success: "Тест создан успешно."
       index:
         header: "Тестики"
         title: "Название"
         level: "Уровень"
-        questions: "Вопрос"
+        questions: "Вопросы"
         actions: ""
 
     navbar:

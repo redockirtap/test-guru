@@ -66,14 +66,14 @@ en:
       
     tests:
       show:
-        questions: "Questions:"
+        questions: "Questions"
       create:
         success: "Test created successfully."
       index:
         header: "Tricky Tests"
         title: "Title"
         level: "Level"
-        questions: "Question"
+        questions: "Questions"
         actions: ""
 
     navbar:

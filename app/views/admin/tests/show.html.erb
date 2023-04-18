@@ -1,13 +1,38 @@
-<p> <b><%= t('admin.labels.test') %>:</b> <%= @test.title %> | <%= link_to t('links.edit'), edit_admin_test_path(@test) %> </p>
-<p> <b><%= t('admin.labels.level') %>:</b> <%= test_level(@test) %> </p>
-<p> <b><%= t('admin.labels.author') %>:</b> <%= @test.author.name %> </p>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
 
-<h3><%= t('.questions')%> </h3> 
+    <div class="mb-3 card border-primary text-center mx-auto col-md-8">
+      <div class="card-body">
+        <p class="m-0 align-self-center"> 
+          <b><%= t('admin.labels.test') %>:</b> <%= @test.title %>
+        </p>
+        <p class="m-0 align-self-center"> <b><%= t('admin.labels.level') %>:</b> <%= test_level(@test) %> </p>
+        <p class="m-0 align-self-center"> <b><%= t('admin.labels.author') %>:</b> <%= @test.author.name %> </p>
+      </div>
+    </div>
 
-<p><%= link_to t('links.new', model: human_name(Question)), new_admin_test_question_path(@test) %></p>
 
-<ol>
-  <%= render 'test_questions' %>
-</ol>
+    <div class="d-flex gap-2 text-center">
+      <h3 class="mb-1"><%= t('.questions')%> </h3> 
 
-<%= link_to t('links.back'), admin_tests_path %>
+      <p class="m-0 align-self-center"><%= link_to t('links.new', model: human_name(Question)),
+                                                      new_admin_test_question_path(@test),
+                                                      class: 'btn btn-outline-primary btn-sm' %></p>
+    </div>
+
+
+    
+    <table class="table table-light table-hover table-bordered mt-2">
+      <tr>
+        <th class="text-center"><%= t('admin.labels.title') %></th>
+        <th class="text-center"><%= t('admin.labels.answers') %></th>
+        <th class="text-center" colspan="3"><%= t('.actions') %></th>
+      </tr>
+
+      <%= render 'test_questions' %>
+    </table>
+    <%= link_to t('links.back'), admin_tests_path %>
+    </div>
+</div>
+
+

@@ -1,8 +1,11 @@
 <% @test.questions.each do |question| %>
-  <li>
-    <p> <%= question.body %> </p>
-    <%= link_to t('links.show'), admin_question_path(question) %> |
-    <%= link_to t('links.edit'), edit_admin_question_path(question) %> |
-    <%= link_to t('links.delete'), admin_question_path(question), method: :delete, data: {confirm: "Are you sure?"} %> 
-  </li>
+  <tr>
+    <td class="text-center align-middle"><%= question.body %> </td>
+    <td class="text-center align-middle"><%= question.answers.count %> </td>
+    <td class="text-center align-middle"><%= link_to t('links.show'), admin_question_path(question) %> </td>
+    <td class="text-center align-middle"><%= link_to t('links.edit'), edit_admin_question_path(question) %> </td>
+    <td class="text-center align-middle"><%= link_to t('links.delete'), 
+                                                     admin_question_path(question), method: :delete, 
+                                                     data: {confirm: "Are you sure?"} %> </td>
+  </tr>
 <% end %>

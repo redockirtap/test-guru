@@ -1,16 +1,28 @@
-<p> <b><%= t('admin.labels.question', model: human_name(Question)) %>:</b>
-<%= @answer.question.body %> | 
-<%= link_to t('links.edit'), edit_admin_question_path(@answer.question) %> </p>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">  
+  
+    <div class="mt-5 mb-2 card border-primary text-center mx-auto">
+      <div class="card-body">
 
-<p>
-  <b><%= t('admin.labels.answer', model: human_name(Answer)) %>:</b>
-  <%= @answer.body %> |
-  <%= link_to t('links.edit'), edit_admin_answer_path %> </p>
-</p>
+        <p> <b><%= t('admin.labels.question', model: human_name(Question)) %>:</b>
+        <%= @answer.question.body %> | 
+        <%= link_to t('links.edit'), edit_admin_question_path(@answer.question) %> </p>
 
-<p>
-  <b><%= t('admin.labels.correct', model: human_name(Answer)) %>:</b>
-  <%= bool_name(@answer.correct) %>
-</p>
+        <p>
+          <b><%= t('admin.labels.answer', model: human_name(Answer)) %>:</b>
+          <%= @answer.body %> |
+          <%= link_to t('links.edit'), edit_admin_answer_path %> </p>
+        </p>
 
-<%= link_to t('admin.actions.back'), admin_question_path(@answer.question) %>
+        <p>
+          <b><%= t('admin.labels.correct', model: human_name(Answer)) %>:</b>
+          <%= bool_name(@answer.correct) %>
+        </p>
+
+        
+      </div>
+    </div>
+
+    <%= link_to t('admin.actions.back'), admin_question_path(@answer.question) %>
+  </div>
+</div>

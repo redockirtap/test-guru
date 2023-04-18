@@ -1,6 +1,9 @@
-<li>
-  <p><%= answer.body %></p>
-  <%= link_to t('links.show'), admin_answer_path(answer) %> |
-  <%= link_to t('links.edit'), edit_admin_answer_path(answer) %> |
-  <%= link_to t('links.delete'), admin_answer_path(answer), method: :delete, data: {confirm: "Are you sure?" } %>
-  </li>
+<tr>
+  <td class="text-center align-middle"><%= answer.body %> </td>
+  <td class="text-center align-middle"><%= answer.correct %> </td>
+  <td class="text-center align-middle"><%= link_to t('links.show'), admin_answer_path(answer) %> </td>
+  <td class="text-center align-middle"><%= link_to t('links.edit'), edit_admin_answer_path(answer) %> </td>
+  <td class="text-center align-middle"><%= link_to t('links.delete'), 
+                                                    admin_answer_path(answer), method: :delete, 
+                                                    data: {confirm: "Are you sure?"} %> </td>
+</tr>
