@@ -98,6 +98,17 @@ ru:
         correct: "Правильный?"
         actions: ""
 
+    gists:
+      index:
+        header: "Gists"
+        username: "Пользователь"
+        question: "Вопрос"
+        url: "Gist"
+
+      gist:
+        show: "%{question}"
+        url: "<a href=\"%{url}\" target=\"_blank\">Посмотреть на Github Gist</a>"
+
   tests:
     index:
       header: "Тестики"

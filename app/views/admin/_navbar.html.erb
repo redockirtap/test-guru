@@ -2,13 +2,14 @@
 <nav class="navbar navbar-light bg-info ps-5 pe-5">
   <span class="navbar-text">
       <span class="navbar-brand me-0">
-      Admin Panel
+      <%= link_to 'Admin Panel', admin_tests_path %> 
       </span>
       | <%= link_to t('.back'), root_path %> 
   </span>
 
   <span class="navbar-text">
     <%= t('.username', name: current_user.name) %> |
+    <%= link_to 'Gists', admin_gists_path %> |
     <%= link_to t('shared.nav.logout'), destroy_user_session_path, method: :delete %>
   </span>
 </nav>

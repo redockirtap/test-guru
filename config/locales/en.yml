@@ -97,6 +97,17 @@ en:
         correct: "Correct?"
         actions: ""
 
+    gists:
+      index:
+        header: "Gists"
+        username: "User"
+        question: "Question"
+        url: "Gist"
+
+      gist:
+        show: "%{question}"
+        url: "<a href=\"%{url}\" target=\"_blank\">Github Gist</a>"
+
   tests:
     index:
       header: "Tricky Tests"

@@ -1,0 +1,19 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <div class="d-flex gap-2 text-center">
+      <h2 class="mb-1">
+        <%= t('.header')%>
+      </h2>
+    </div>
+
+    <table class="table table-light table-hover table-bordered mt-2">
+      <tr>
+        <th class="text-center"><%= t('.username') %></th>
+        <th class="col col-md-4 text-center"><%= t('.question') %></th>
+        <th class="text-center"><%= t('.url') %></th>
+      </tr>
+
+      <%= render @gists %>
+    </table>
+  </div>
+</div>

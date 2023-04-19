@@ -1,0 +1,8 @@
+<tr>
+  <td class="text-center align-middle"><%= gist.user.name %></td>
+  <td class="text-center align-middle">
+    <%= link_to t('.show', question: gist.question.body.truncate(25, separator: ' ')),
+                admin_question_path(gist.question) %>
+  </td>
+  <td class="text-center align-middle"><%= link_to t('.url', url: gist.url).html_safe, gist.url %></td>
+</tr>

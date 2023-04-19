@@ -1,6 +1,6 @@
 <% @test.questions.each do |question| %>
   <tr>
-    <td class="text-center align-middle"><%= question.body %> </td>
+    <td class="text-center align-middle"><%= question.body.truncate(25, separator: ' ') %> </td>
     <td class="text-center align-middle"><%= question.answers.count %> </td>
     <td class="text-center align-middle"><%= link_to t('links.show'), admin_question_path(question) %> </td>
     <td class="text-center align-middle"><%= link_to t('links.edit'), edit_admin_question_path(question) %> </td>

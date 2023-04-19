@@ -1,5 +1,5 @@
 <tr>
-  <td class="text-center align-middle"><%= test.title %></td>
+  <td class="text-center align-middle"><%= test.title.truncate(25, separator: ' ') %></td>
   <td class="text-center align-middle"><%= test_level(test) %></td>
   <td class="text-center align-middle"><%= test.questions.count %></td>
   <td class="text-center align-middle"><%= link_to t('links.show'), admin_test_path(test) %></td>
