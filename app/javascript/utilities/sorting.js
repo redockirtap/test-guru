@@ -23,7 +23,6 @@ function sortRowsByTitle () {
   }
 
   let sortedTable = document.createElement('table')
-  sortedTable.classList.add('table', 'table-light', 'table-hover', 'table-bordered', 'mt-2')
 
 
   sortedTable.appendChild(rows[0])
@@ -33,13 +32,13 @@ function sortRowsByTitle () {
   }
 
   table.replaceWith(sortedTable)
+  sortedTable.classList.add('table', 'table-light', 'table-hover', 'table-bordered', 'mt-2')
+
 }
 
 function compareRowsAsc(row1, row2) {
 let testTitle1 = row1.querySelector('td').textContent
 let testTitle2 = row2.querySelector('td').textContent
-
-console.log(testTitle1, testTitle2)
 
 if (testTitle1 < testTitle2) { return 1 }
 if (testTitle1 > testTitle2) { return -1 }

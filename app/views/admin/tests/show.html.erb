@@ -24,7 +24,11 @@
     
     <table class="table table-light table-hover table-bordered mt-2">
       <tr>
-        <th class="text-center"><%= t('.title') %></th>
+        <th class="sort-by-title pointer text-center">
+          <%= t('.title') %>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success hide' %>
+        </th>
         <th class="text-center"><%= t('.answers') %></th>
         <th class="text-center" colspan="3"><%= t('.actions') %></th>
       </tr>
