@@ -26,12 +26,12 @@
               <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %>
-              <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', placeholder: 'Enter your password' %>
+              <%= f.password_field :password, autocomplete: "new-password", class: 'form-control check-pwd pwd', placeholder: 'Enter your password' %>
             </p>
 
             <p>
               <%= f.label :password_confirmation %>
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', placeholder: 'Repeat your password' %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control check-pwd pwd-confirmation', placeholder: 'Repeat your password' %>
             </p>
 
             <%= f.submit t('.submit.create'), class: 'btn btn-primary' %>

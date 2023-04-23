@@ -8,8 +8,8 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
-// import "channels"
-require("../utilities/sorting")
+import "utilities/sorting"
+import "utilities/checkPasswords"
 
 Rails.start()
 Turbolinks.start()

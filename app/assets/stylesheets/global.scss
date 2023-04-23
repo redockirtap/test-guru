@@ -2,14 +2,14 @@
   cursor: pointer;
 }
 
-.hide {
-  display: none;
+.arrow-active {
+  color: rgb(75, 93, 255);
 }
 
-.error-icon {
-  fill: red;
+.error-pwd {
+  box-shadow: 0 0 0 0.25rem rgba(237, 45, 45, 0.423) !important;
 }
 
-.accept-icon {
-  fill: green;
+.accept-pwd {
+  box-shadow: 0 0 0 0.25rem rgba(1, 195, 1, 0.604) !important;
 }

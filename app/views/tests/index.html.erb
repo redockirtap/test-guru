@@ -6,7 +6,11 @@
 
     <table class="table table-light table-hover table-bordered">
       <tr>
-        <th class="text-center"><%= t('.title')%></th>
+        <th class="sort-by-title pointer text-center">
+          <%= t('.title') %>
+          <%= octicon 'arrow-up' %>
+          <%= octicon 'arrow-down' %>
+        </th>
         <th class="text-center"><%= t('.level')%></th>
         <th class="text-center"><%= t('.questions')%></th>
         <th class="text-center"><%= t('.actions')%></th>
