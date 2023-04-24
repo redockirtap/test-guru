@@ -1,9 +1,22 @@
-<tr>
-  <td class="text-center align-middle"><%= test.title.truncate(25, separator: ' ') %></td>
+<tr class="edit-pencil">
+  <td class="text-center align-middle col-md-4">
+    <%= content_tag :span,  
+                    class: 'test-title', 
+                    data: { test_id: test.id } do %>
+      <%= test.title.truncate(25, separator: ' ') %>
+      <%= link_to edit_admin_test_path(test),
+                  data: { test_id: test.id },
+                  class: 'form-inline-link hide' do %>
+        <%= octicon 'pencil' %>
+      <% end %>
+    <% end %>
+    <%= render 'form_inline', test: test == @test ? @test : test %>
+  </td>
   <td class="text-center align-middle"><%= test_level(test) %></td>
   <td class="text-center align-middle"><%= test.questions.count %></td>
   <td class="text-center align-middle"><%= link_to t('links.show'), admin_test_path(test) %></td>
-  <td class="text-center align-middle"><%= link_to t('links.edit'), edit_admin_test_path(test) %></td>
+  <td class="text-center align-middle"><%= link_to t('links.edit'), edit_admin_test_path(test) %>
+  </td>
   <td class="text-center align-middle">
     <%= link_to t('links.delete'), 
                 admin_test_path(test),

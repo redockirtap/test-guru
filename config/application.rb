@@ -15,6 +15,10 @@ module TestGuru
 
     config.autoload_paths << "#{Rails.root}/lib/clients"
 
+    config.action_view.field_error_proc = proc { |html_tag, _instance|
+      html_tag.html_safe
+    }
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

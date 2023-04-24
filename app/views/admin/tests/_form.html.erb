@@ -5,26 +5,26 @@
 
     <%= form_with model: [:admin, @test], local: true do |form| %>
 
-    <div class="form-group">
+      <div class="form-group">
 
-      <p>
-        <%= form.label :title %><br>
-        <%= form.text_field :title, id: :test_title, class: 'form-control', placeholder: t('placeholders.test.title') %>
-      </p>
+        <p>
+          <%= form.label :title %><br>
+          <%= form.text_field :title, id: :test_title, class: 'form-control', placeholder: t('placeholders.test.title') %>
+        </p>
 
-      <p>
-        <%= form.label :level %><br>
-        <%= form.select :level, levels, {prompt: t('helpers.select.prompt.level')}, {class: "form-select"} %>
-      </p>
+        <p>
+          <%= form.label :level %><br>
+          <%= form.select :level, levels, {prompt: t('helpers.select.prompt.level')}, {class: "form-select"} %>
+        </p>
 
-      <p>
-        <%= form.label :category_id %>
-        <%= form.collection_select(:category_id, Category.all, :id, :title, {prompt: t('helpers.select.prompt')}, {class: "form-select"}) %>
-      </p>
+        <p>
+          <%= form.label :category_id %>
+          <%= form.collection_select(:category_id, Category.all, :id, :title, {prompt: t('helpers.select.prompt')}, {class: "form-select"}) %>
+        </p>
 
-      <p><%= form.submit class: 'btn btn-primary' %></p>
+        <p><%= form.submit class: 'btn btn-primary' %></p>
 
-    </div>
+      </div>
     <% end %>
 
   </div>
