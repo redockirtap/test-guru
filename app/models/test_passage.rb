@@ -16,6 +16,12 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def progress
+    return 100 if completed?
+
+    (current_question_number - 1) * 100 / all_test_questions.count
+  end
+
   private
 
   def correct_answer?(answer_ids)
@@ -32,5 +38,13 @@ class TestPassage < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def current_question_number
+    all_test_questions.pluck(:id).find_index(current_question.id) + 1 unless completed?
+  end
+
+  def all_test_questions
+    current_question.test.questions
   end
 end
